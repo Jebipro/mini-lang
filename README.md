@@ -1,5 +1,7 @@
 # Mini-Lang
 
+**한국어** | [English](./README.en.md)
+
 TypeScript로 직접 작성한 교육용 tree-walk interpreter입니다. Lexer와 recursive-descent Parser가 source 위치를 보존하고, interpreter가 lexical environment와 mutable binding을 통해 함수·closure·재귀·배열을 실행합니다.
 
 ## 설치와 실행
