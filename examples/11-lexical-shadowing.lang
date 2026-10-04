@@ -1,0 +1,8 @@
+let x = 1;
+fn read() { return x; }
+print(read());
+{
+  let x = 2;
+  print(x);
+  print(read());
+}

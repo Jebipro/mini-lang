@@ -1,0 +1,5 @@
+fn sum(a, index) {
+  if (index == len(a)) { return 0; }
+  return a[index] + sum(a, index + 1);
+}
+print(sum([1, 2, 3, 4], 0));

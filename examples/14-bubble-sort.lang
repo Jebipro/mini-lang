@@ -1,0 +1,15 @@
+let a = [3, 1, 4, 1, 5];
+let end = len(a) - 1;
+while (end > 0) {
+  let i = 0;
+  while (i < end) {
+    if (a[i] > a[i + 1]) {
+      let temporary = a[i];
+      a[i] = a[i + 1];
+      a[i + 1] = temporary;
+    }
+    i = i + 1;
+  }
+  end = end - 1;
+}
+print(a);

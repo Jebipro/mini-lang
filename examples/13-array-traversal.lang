@@ -1,0 +1,5 @@
+let a = [1, 2, 3, 4];
+let i = 0;
+let total = 0;
+while (i < len(a)) { total = total + a[i]; i = i + 1; }
+print(total);

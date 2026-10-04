@@ -1,0 +1,32 @@
+{
+  "name": "mini-lang",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check:any": "node scripts/check-any.mjs",
+    "check": "npm test && npm run typecheck && npm run check:any",
+    "test:integration": "npm run build && vitest run tests/integration",
+    "test:examples": "npm run build && vitest run tests/integration/examples.test.ts",
+    "fuzz:extended": "tsc -p tsconfig.fuzz.json && node .tmp/fuzz/tests/fuzz/campaign.js",
+    "fuzz:replay": "tsc -p tsconfig.fuzz.json && node .tmp/fuzz/tests/fuzz/replay.js",
+    "benchmark": "tsc -p tsconfig.benchmark.json && node .tmp/benchmark/benchmarks/run.js",
+    "benchmark:extended": "tsc -p tsconfig.benchmark.json && node .tmp/benchmark/benchmarks/run.js --extended",
+    "prerun": "npm run build",
+    "run": "node dist/cli/run.js",
+    "prerepl": "npm run build",
+    "repl": "node dist/cli/repl.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "~5.9.3",
+    "vitest": "4.1.11"
+  }
+}
